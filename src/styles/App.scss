@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.app {
+  display: grid;
+  grid-auto-rows: 65vh 35vh;
+
+  .app-header {
+    background-color: #eb3b5a;
+    padding: 30px 50px;
+    color: #fff;
+    font-size: 4em;
+    font-weight: 100;
+    line-height: 0.9;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  .current-info {
+    align-self: center;
+    font-size: 2em;
+  }
+
+  .text-small {
+    font-size: 0.5em;
+    font-weight: 200;
+  }
+
+  .app-info {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0 30px;
+
+    div {
+      padding: 20px;
+      flex-shrink: 0;
+      flex-grow: 1;
+      text-align: center;
+      color: #404242;
+
+      p {
+        font-size: 1em;
+        margin-bottom: 16px;
+      }
+
+      .forecast {
+        font-size: 3em;
+        color: #95a5a6;
+        margin-bottom: 16px;
+      }
+    }
+
+    .forecast-day {
+      border-right: 1px solid #a6b9b991;
+    }
+
+    .forecast-day.first {
+      border-left: 1px solid #a6b9b991;
+    }
+  }
+}
+
+.current-temperature {
+  border-right: 1px solid #a6b9b991;
+  border-left: 1px solid #a6b9b991;
+}
+
+.sunny {
+  color: #fed330;
+  font-size: 6em;
+}
+
+.mist {
+  color: #95a5a6;
+  font-size: 6em;
+}
+
+.sunny + p, .mist + p {
+  margin-top: 20px;
+  position: relative;
+}
+
+.temperature {
+  div:first-child {
+    border-bottom: 1px solid #a6b9b991;
+  }
+
+  span:first-child {
+    font-size: 2em;
+  }
+}
